@@ -21,18 +21,18 @@ def download(url, destination):
     import urllib
     urllib.urlretrieve(url, destination)
 
-download(sparkline([1.4142,
-1.4003,
-1.397,
-1.3984,
-1.3924,
-1.3884,
-1.402 ,
-1.3947,
-1.3978,
-1.3967,
-1.4107,
-1.4148,
-1.4105,
-1.4231]), "/Users/jp/EUR.png")
-
+if __name__ == '__main__':
+    download(sparkline([1.4142,
+    1.4003,
+    1.397,
+    1.3984,
+    1.3924,
+    1.3884,
+    1.402 ,
+    1.3947,
+    1.3978,
+    1.3967,
+    1.4107,
+    1.4148,
+    1.4105,
+    1.4231]), "/Users/jp/EUR.png")

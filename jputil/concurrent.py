@@ -27,3 +27,13 @@ def acquire(*locks):
         for lock in reversed(locks):
             lock.release()
         del acquired[-len(locks):]
+
+
+
+def coroutine(func):
+    """A decorator for priming a coroutine function."""
+    def start(*args,**kwargs):
+        cr = func(*args,**kwargs)
+        cr.next()
+        return cr
+    return start
